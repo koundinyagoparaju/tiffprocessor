@@ -1,0 +1,11 @@
+.nanolyze-app {
+    display: grid;
+    justify-items: center;
+}
+.tiff-processor {
+    display: grid;
+    justify-items: center;
+}
+.tiff-processor img {
+    border: thick double black;
+}

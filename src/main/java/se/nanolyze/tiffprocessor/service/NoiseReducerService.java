@@ -13,15 +13,15 @@ import java.io.*;
 @Service
 public class NoiseReducerService {
 
-  public InputStream process(@Nonnull File tiffFile) {
+  public InputStream process(@Nonnull File tiffFile) throws IOException {
     var tiffReader = getTiffReader();
     try (var imageInputStream = new FileImageInputStream(tiffFile)) {
       tiffReader.setInput(imageInputStream);
       int numOfImages = tiffReader.getNumImages(true);
       if (numOfImages == 0) return FileInputStream.nullInputStream();
       return buildAverageImage(tiffReader, numOfImages);
-    } catch (IOException e) {
-      throw new RuntimeException(e);
+    } finally {
+      tiffReader.dispose();
     }
   }
 

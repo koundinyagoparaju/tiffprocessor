@@ -8,7 +8,7 @@ Stack:
 
 Functionality:
 - To run the application,
-    1. If jdk 19 is installed in the system, run the command `./mvnw spring-boot:run` in *unix based systems and `.\mvnw.cmd spring-boot:run` for windows based systems.
+    1. If jdk 19 is installed in the system, run the command `./mvnw spring-boot:run` in *nix based systems and `.\mvnw.cmd spring-boot:run` for windows based systems.
     2. If docker is installed in the system, run the command `./run.sh` in *unix based systems and `.\run.cmd` for windows based systems.
 
 Assumptions:
